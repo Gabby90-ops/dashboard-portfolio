@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard 3</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #111;
+      color: white;
+      padding: 10px 20px;
+      font-family: sans-serif;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #0af;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    iframe {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 40px);
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    📊 Dashboard 3 | 
+    <a href="index.html">Dashboard 1</a> | 
+    <a href="dashboard2.html">Wallboard</a>
+  </nav>
+
+  <iframe 
+    src="https://lookerstudio.google.com/embed/reporting/08b86a95-228a-4fcb-9a66-3384c6347638/page/p_oezl0fx9rd"
+    allowfullscreen 
+    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+  </iframe>
+
+</body>
+</html>
