@@ -5,31 +5,53 @@
   <title>Gabby's Dashboard Portfolio</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      padding: 40px;
-      text-align: center;
       background-color: #f9f9f9;
     }
-    h1 {
-      color: #333;
+
+    header {
+      padding: 30px;
+      text-align: center;
+      background-color: #222;
+      color: white;
     }
-    iframe {
-      margin-top: 20px;
-      border: 1px solid #ccc;
+
+    .dashboard-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .dashboard-embed {
+      width: 95vw;
+      height: 90vh;
+      border: none;
       border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .dashboard-embed {
+        height: 70vh;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>📊 Gabby's Dashboard Portfolio</h1>
-  <p>Looker Studio Dashboard:</p>
 
-  <iframe width="600" height="650" 
-    src="https://lookerstudio.google.com/embed/reporting/2382ec56-42a6-4385-bc04-fc12176dbe26/page/iBDdE" 
-    frameborder="0" 
-    style="border:0" 
-    allowfullscreen 
-    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-  </iframe>
+  <header>
+    <h1>📊 Gabby's Dashboard Portfolio</h1>
+    <p>Looker Studio Dashboard</p>
+  </header>
+
+  <div class="dashboard-container">
+    <iframe class="dashboard-embed" 
+      src="https://lookerstudio.google.com/embed/reporting/2382ec56-42a6-4385-bc04-fc12176dbe26/page/iBDdE"
+      allowfullscreen 
+      sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+    </iframe>
+  </div>
+
 </body>
 </html>
