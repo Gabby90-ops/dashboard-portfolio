@@ -2,55 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard 1</title>
+  <title>My Looker Portfolio</title>
   <style>
-    html, body {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
+      padding: 40px;
+      background-color: #f5f5f5;
+      text-align: center;
     }
 
-    nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #111;
-      color: white;
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 280px;
+      transition: transform 0.2s ease;
+      text-align: left;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      display: inline-block;
       padding: 10px 20px;
-      font-family: sans-serif;
-      z-index: 10;
-    }
-
-    nav a {
-      color: #0af;
-      margin-left: 20px;
+      background-color: #007bff;
+      color: white;
       text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
     }
 
-    iframe {
-      position: absolute;
-      top: 40px; /* Push down for nav bar */
-      left: 0;
-      width: 100%;
-      height: calc(100% - 40px);
-      border: none;
+    .card a:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    📊 Dashboard 1 | <a href="dashboard2.html">Go to Dashboard 2 →</a>
-  </nav>
+  <h1>📊 My Looker Studio Portfolio</h1>
 
-  <iframe 
-    src="https://lookerstudio.google.com/embed/reporting/2382ec56-42a6-4385-bc04-fc12176dbe26/page/iBDdE"
-    allowfullscreen 
-    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-  </iframe>
+  <div class="card-container">
+    <div class="card">
+      <h2>Call Center Dashboard</h2>
+      <p>First Looker Studio dashboard showing core analytics.</p>
+      <a href="dashboard1.html">View Dashboard</a>
+    </div>
+
+    <div class="card">
+      <h2>Wallboard</h2>
+      <p>Operational wallboard with live KPIs.</p>
+      <a href="dashboard2.html">View Wallboard</a>
+    </div>
+
+    <div class="card">
+      <h2>Fall Out Report Page</h2>
+      <p>Detailed report with extended layout.</p>
+      <a href="dashboard3.html">View Dashboard</a>
+    </div>
+  </div>
 
 </body>
 </html>
